@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "category": "airport",
+    "thai": "สวัสดีครับ",
+    "reading": "サワディークラップ",
+    "meaning": "こんにちは（男性）",
+    "note": "男性は「クラップ」、女性は「カー」を語尾につける",
+    "is_core": true
+  },
+  {
+    "id": 2,
+    "category": "airport",
+    "thai": "ห้องน้ำอยู่ที่ไหน",
+    "reading": "ホンナーム ユー ティーナイ",
+    "meaning": "トイレはどこですか？",
+    "note": "空港で必ず使うフレーズ",
+    "is_core": true
+  },
+  {
+    "id": 3,
+    "category": "airport",
+    "thai": "แลกเงินได้ที่ไหน",
+    "reading": "レーク ングン ダイ ティーナイ",
+    "meaning": "両替はどこでできますか？",
+    "note": "空港の両替所で使う",
+    "is_core": false
+  },
+  {
+    "id": 4,
+    "category": "airport",
+    "thai": "ผมมาเที่ยว",
+    "reading": "ポム マー ティアオ",
+    "meaning": "観光で来ました",
+    "note": "入国審査で聞かれたら",
+    "is_core": false
+  },
+  {
+    "id": 5,
+    "category": "airport",
+    "thai": "อยู่ที่โรงแรม",
+    "reading": "ユー ティー ローンレーム",
+    "meaning": "ホテルに泊まります",
+    "note": "入国審査で滞在先を聞かれたら",
+    "is_core": false
+  },
+  {
+    "id": 6,
+    "category": "transport",
+    "thai": "ไปที่นี่",
+    "reading": "パイ ティーニー",
+    "meaning": "ここに行ってください",
+    "note": "住所やマップを見せながら使う",
+    "is_core": true
+  },
+  {
+    "id": 7,
+    "category": "transport",
+    "thai": "หยุดที่นี่",
+    "reading": "ユット ティーニー",
+    "meaning": "ここで止めてください",
+    "note": "タクシーを降りるとき",
+    "is_core": true
+  },
+  {
+    "id": 8,
+    "category": "transport",
+    "thai": "เท่าไหร่",
+    "reading": "タオライ",
+    "meaning": "いくらですか？",
+    "note": "料金を確認するとき",
+    "is_core": true
+  },
+  {
+    "id": 9,
+    "category": "transport",
+    "thai": "ไกลไหม",
+    "reading": "グライ マイ",
+    "meaning": "遠いですか？",
+    "note": "目的地までの距離を確認",
+    "is_core": false
+  },
+  {
+    "id": 10,
+    "category": "transport",
+    "thai": "ใช้มิเตอร์",
+    "reading": "チャイ ミーター",
+    "meaning": "メーターを使ってください",
+    "note": "タクシーでメーター利用をお願いする",
+    "is_core": false
+  },
+  {
+    "id": 11,
+    "category": "hotel",
+    "thai": "เช็คอินครับ",
+    "reading": "チェックイン クラップ",
+    "meaning": "チェックインお願いします",
+    "note": "ホテルのフロントで",
+    "is_core": true
+  },
+  {
+    "id": 12,
+    "category": "hotel",
+    "thai": "รหัส WiFi คืออะไร",
+    "reading": "ラハット ワイファイ クアライ",
+    "meaning": "Wi-Fiのパスワードは何ですか？",
+    "note": "ホテルでWi-Fiを使いたいとき",
+    "is_core": true
+  },
+  {
+    "id": 13,
+    "category": "hotel",
+    "thai": "อาหารเช้ากี่โมง",
+    "reading": "アーハーン チャオ ギー モーン",
+    "meaning": "朝食は何時ですか？",
+    "note": "朝食の時間を確認",
+    "is_core": false
+  },
+  {
+    "id": 14,
+    "category": "hotel",
+    "thai": "ห้องพักอยู่ชั้นไหน",
+    "reading": "ホン パック ユー チャン ナイ",
+    "meaning": "部屋は何階ですか？",
+    "note": "部屋の場所を確認",
+    "is_core": false
+  },
+  {
+    "id": 15,
+    "category": "hotel",
+    "thai": "เช็คเอาท์กี่โมง",
+    "reading": "チェックアウト ギー モーン",
+    "meaning": "チェックアウトは何時ですか？",
+    "note": "チェックアウト時間の確認",
+    "is_core": false
+  },
+  {
+    "id": 16,
+    "category": "food",
+    "thai": "เอาอันนี้",
+    "reading": "アオ アンニー",
+    "meaning": "これください",
+    "note": "メニューを指さして注文",
+    "is_core": true
+  },
+  {
+    "id": 17,
+    "category": "food",
+    "thai": "ไม่เอาผักชี",
+    "reading": "マイ アオ パクチー",
+    "meaning": "パクチー抜きで",
+    "note": "パクチーが苦手な人に必須",
+    "is_core": true
+  },
+  {
+    "id": 18,
+    "category": "food",
+    "thai": "ไม่เผ็ด",
+    "reading": "マイ ペット",
+    "meaning": "辛くしないで",
+    "note": "辛さを調整したいとき",
+    "is_core": true
+  },
+  {
+    "id": 19,
+    "category": "food",
+    "thai": "อร่อยมาก",
+    "reading": "アロイ マーク",
+    "meaning": "とても美味しい",
+    "note": "料理を褒めるとき",
+    "is_core": false
+  },
+  {
+    "id": 20,
+    "category": "food",
+    "thai": "เช็คบิลครับ",
+    "reading": "チェックビン クラップ",
+    "meaning": "お会計お願いします",
+    "note": "食事の後で",
+    "is_core": false
+  },
+  {
+    "id": 21,
+    "category": "basic",
+    "thai": "ขอบคุณครับ",
+    "reading": "コップクン クラップ",
+    "meaning": "ありがとうございます",
+    "note": "最も使う基本フレーズ",
+    "is_core": true
+  },
+  {
+    "id": 22,
+    "category": "basic",
+    "thai": "ขอโทษครับ",
+    "reading": "コートート クラップ",
+    "meaning": "すみません・ごめんなさい",
+    "note": "謝るとき・呼びかけるとき",
+    "is_core": true
+  },
+  {
+    "id": 23,
+    "category": "basic",
+    "thai": "ช่วยด้วย",
+    "reading": "チュアイ ドゥアイ",
+    "meaning": "助けてください",
+    "note": "緊急時に使う",
+    "is_core": true
+  },
+  {
+    "id": 24,
+    "category": "basic",
+    "thai": "ไม่เข้าใจ",
+    "reading": "マイ カオチャイ",
+    "meaning": "わかりません",
+    "note": "理解できないとき",
+    "is_core": false
+  },
+  {
+    "id": 25,
+    "category": "basic",
+    "thai": "พูดช้าๆ ได้ไหม",
+    "reading": "プート チャーチャー ダイマイ",
+    "meaning": "ゆっくり話してください",
+    "note": "相手の話が速いとき",
+    "is_core": false
+  }
+]
