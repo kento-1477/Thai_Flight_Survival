@@ -114,19 +114,29 @@ struct LastSpurtView: View {
                 
                 // 選択肢
                 VStack(spacing: 12) {
-                    ForEach(quizState.options, id: \.self) { option in
+                    ForEach(quizState.optionItems, id: \.self) { optionItem in
                         Button(action: {
                             if !quizState.isAnswered {
-                                handleAnswer(option, quizState: quizState)
+                                handleAnswer(optionItem.text, quizState: quizState)
                             }
                         }) {
-                            Text(option)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .optionButtonStyle(
-                                    colorScheme,
-                                    isSelected: quizState.selectedAnswer == option,
-                                    isCorrect: quizState.isAnswered ? (option == quizState.correctAnswer) : nil
-                                )
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(optionItem.text)
+                                    .font(.body)
+                                    .fontWeight(.medium)
+                                
+                                if let reading = optionItem.reading {
+                                    Text(reading)
+                                        .font(.caption)
+                                        .foregroundColor(Color.themeSecondaryText(colorScheme))
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .optionButtonStyle(
+                                colorScheme,
+                                isSelected: quizState.selectedAnswer == optionItem.text,
+                                isCorrect: quizState.isAnswered ? (optionItem.text == quizState.correctAnswer) : nil
+                            )
                         }
                         .disabled(quizState.isAnswered)
                     }

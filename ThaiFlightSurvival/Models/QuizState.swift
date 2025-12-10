@@ -20,16 +20,34 @@ enum QuizMode: String, CaseIterable {
     }
 }
 
+/// 選択肢の情報（タイ語 + 読み仮名）
+struct OptionItem: Hashable {
+    let text: String      // メインテキスト（タイ語 or 日本語）
+    let reading: String?  // 読み仮名（発信モード時のみ）
+    
+    var displayText: String {
+        if let reading = reading {
+            return "\(text)\n\(reading)"
+        }
+        return text
+    }
+}
+
 /// クイズの状態
 struct QuizState {
     var currentPhrase: Phrase
-    var options: [String]
+    var optionItems: [OptionItem]  // 選択肢（読み仮名付き）
     var correctAnswer: String
     var selectedAnswer: String?
     var isAnswered: Bool
     var isCorrect: Bool?
     var mode: QuizMode
     var streakCount: Int
+    
+    /// 選択肢のテキスト配列（互換性のため）
+    var options: [String] {
+        optionItems.map { $0.text }
+    }
     
     init(phrase: Phrase, allPhrases: [Phrase], mode: QuizMode, streakCount: Int = 0) {
         self.currentPhrase = phrase
@@ -40,24 +58,26 @@ struct QuizState {
         // 正解と選択肢を生成
         switch mode {
         case .reception:
-            // タイ語 → 日本語：日本語の選択肢を生成
+            // タイ語 → 日本語：日本語の選択肢を生成（読み仮名なし）
             self.correctAnswer = phrase.meaning
-            let wrongAnswers = allPhrases
+            let correctOption = OptionItem(text: phrase.meaning, reading: nil)
+            let wrongOptions = allPhrases
                 .filter { $0.id != phrase.id }
                 .shuffled()
                 .prefix(3)
-                .map { $0.meaning }
-            self.options = ([correctAnswer] + wrongAnswers).shuffled()
+                .map { OptionItem(text: $0.meaning, reading: nil) }
+            self.optionItems = ([correctOption] + wrongOptions).shuffled()
             
         case .production:
-            // 日本語 → タイ語：タイ語の選択肢を生成
+            // 日本語 → タイ語：タイ語の選択肢を生成（読み仮名付き）
             self.correctAnswer = phrase.thai
-            let wrongAnswers = allPhrases
+            let correctOption = OptionItem(text: phrase.thai, reading: phrase.reading)
+            let wrongOptions = allPhrases
                 .filter { $0.id != phrase.id }
                 .shuffled()
                 .prefix(3)
-                .map { $0.thai }
-            self.options = ([correctAnswer] + wrongAnswers).shuffled()
+                .map { OptionItem(text: $0.thai, reading: $0.reading) }
+            self.optionItems = ([correctOption] + wrongOptions).shuffled()
         }
     }
     
@@ -88,3 +108,4 @@ struct QuizState {
         isCorrect = answer == correctAnswer
     }
 }
+
